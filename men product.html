@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Products</title>
+    <style>
+        /*container for all products*/
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+         /*2 products horizontally*/
+         gap: 20px;
+         margin: 20px;
+    }
+    /*individual product styling*/
+    .product{
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        background-color: #ff;
+        border radius: 8px;
+    }
+    .product img{
+        width: 50%;
+        height: 100%;
+        max-height: 300px;
+        border-radius: 4px;
+    }
+    /*styling for the title and price*/
+    .product h3{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .product p {
+        font-size: 16px;
+        color: blue;
+    }
+    /*responsize adjustments*/
+    @media
+        (max-width:1024px)
+{
+    .product-container
+    {
+        grid-template-columns:repeat(3,1 fr);
+        /*3 products per row on medium screens*/       
+    }
+}
+@media(max-width:768px)
+{
+    .product-container
+    {
+        grid-template-columns: repeat(2,1 fr);
+        /*products per row on smaller screens*/
+    }
+}
+@media (max max-width:40px)
+{
+    .product-container
+    {
+        grid-template-columns: 1fr;
+        /* product per row on very small screens*/
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#logo{
+    align-items: center;
+    display: flex;
+    margin-left: 35%;    
+    
+}
+header {
+background-color: lightgrey;
+color: black;
+padding: 20px;
+text-align: center;
+}
+ul li a:hover{
+    color: black;
+}
+.sub-menu{
+    display: none;
+}
+.sub-menu ul{
+    position: absolute;
+}
+.menu ul li:hover .sub-menu{
+    display: block;
+    position: absolute;
+
+}
+ul li img {
+    height:350px;
+    width: 250px;
+}
+#ul women{
+    display: inline;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+      display: inline-block;
+      margin-right: 20px;
+}
+.menu a {
+    color: red;
+    text-decoration: none;
+}
+.menu ul li:hover .sub-menu ul li{
+    color: black;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>
+            SSP Fashions
+        </h1>
+        <nav>
+            <div class="menu">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="#">Products</a>
+                    <div class="sub-menu">
+                        <ul>
+                    <li> <a href="men product.html">Men </a></li>
+                    <li><a href="women product.html">Women</a></li>
+                    <li><a href="kids product.html">Kids</a></li>
+                </ul>
+                </div>
+                </li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+    <div class="product-container">
+        <!-product 1>
+        <div class="product">
+            <img src="./men/men 1.jpg" alt="Dress 1">
+        <h3>Oxford Shirt</h3>
+        <p>$49.99</p>
+        </div>
+        <!-product 2>
+        <div class="product">
+            <img src="./men/men 2.jpeg" alt="Dress 2">
+        <h3>Tuxedo</h3> 
+        <p>$39.99</p>
+        </div>
+        <!-product 3>
+        <div class="product">
+            <img src="./men/men 3.jpeg" alt="Dress 3">
+        <h3>Blazer</h3>
+        <p>$59.99</p>
+        </div>
+        <!-product 4>
+        <div class="product">
+            <img src="./men/men 4.jpg" alt="Dress 4">
+        <h3>Chinos</h3>
+        <p>$99.99</p>
+        </div>
+        <!-product 5>
+        <div class="product">
+            <img src="./men/men 5.jpg" alt="Dress 5">
+        <h3>Polo Shirt</h3>
+        <p>$45.99</p>
+        </div>
+         <!-product 6>
+        <div class="product">
+            <img src="./men/men 6.jpeg" alt="Dress 6">
+        <h3>Henley Shirt</h3>
+        <p>$49.99</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>
